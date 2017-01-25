@@ -9,7 +9,7 @@ The steps I have done:
   # Devise install message at: rob.devise.msg.txt
   # Edit file: config/environments/development.rb:
   # Set: config.action_mailer.perform_deliveries = true
-  #Edit file: app/views/layouts/application.html.erb
+  # Edit file: app/views/layouts/application.html.erb
   # Add
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
@@ -20,7 +20,18 @@ The steps I have done:
   # Edit the file: app/views/welcome/index.html.erb
   # Add the code at: rob.devise.log.txt
   # Need to setup gmail to mail. See file: rob.devise.email.txt
+  # Change email: app/mailers/application_mailer.rb
+  # Change email: config/initializers/devise.rb
   # File: app/models/user.rb - Allow Confirmable and Lockable 
   # Next we need Devise to export all templates to our views folder
   $ rails g devise:views
   # Output is at: rob.devise.views.txt
+  # Now create user controller, fill it out + strong para
+  $ rails g controller users
+
+  # Now add a name to user model
+  $ rails generate migration add_name_to_users name:string
+  $ rake db:migrate
+  # ?? Need to change app/controllers/application_controller.rb
+  # ?? See file: rob.devise.devisesan.txt
+  
