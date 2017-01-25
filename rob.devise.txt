@@ -32,6 +32,6 @@ The steps I have done:
   # Now add a name to user model
   $ rails generate migration add_name_to_users name:string
   $ rake db:migrate
-  # ?? Need to change app/controllers/application_controller.rb
-  # ?? See file: rob.devise.devisesan.txt
+  # Need to change app/controllers/application_controller.rb
+  # See file: rob.devise.devisesan.txt
   

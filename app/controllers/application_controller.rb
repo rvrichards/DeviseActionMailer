@@ -13,10 +13,3 @@ class ApplicationController < ActionController::Base
         end
 end
 
-
-
-  # def configure_permitted_parameters
-  #   attributes = [:name, :surname,:username, :email, :avatar]
-  #   devise_parameter_sanitizer.permit(:sign_up, keys: attributes)
-  #   devise_parameter_sanitizer.permit(:account_update, keys: attributes)
-  # end
