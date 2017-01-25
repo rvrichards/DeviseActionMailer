@@ -1,0 +1,26 @@
+The steps I have done:
+
+  $ rails new DeviseActionMailer  # We'll use sqlite
+  $ cd DeviseActionMailer/
+  $ rails generate controller welcome index
+  # Edit welcome.html.erb so I know it's me
+  $ bundle install
+  $ rails generate devise:install
+  # Devise install message at: rob.devise.msg.txt
+  # Edit file: config/environments/development.rb:
+  # Set: config.action_mailer.perform_deliveries = true
+  #Edit file: app/views/layouts/application.html.erb
+  # Add
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  $ rails generate devise User
+  # Edit migration file uncomment Confirmable and Lockable modules
+  $ rake db:migrate
+  # At this point we can sign in and sign up! 
+  # Edit the file: app/views/welcome/index.html.erb
+  # Add the code at: rob.devise.log.txt
+  # Need to setup gmail to mail. See file: rob.devise.email.txt
+  # File: app/models/user.rb - Allow Confirmable and Lockable 
+  # Next we need Devise to export all templates to our views folder
+  $ rails g devise:views
+  # Output is at: rob.devise.views.txt
